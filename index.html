@@ -3,39 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
     <title>Project Start</title>
   </head>
   <body>
-    <div>
-      <h1>Calculadora de gorjetas</h1>
-    </div>
-    <div>
-      <form>
-        <label for="bill">
-          <p>Quanto ficou a conta?</p>
-        </label>
-        <p>R$ <input type="number" placeholder="100" name="bill" id="bill"/></p>
-        <label for="serviceQual">
-          <p>Como foi seu serviço?</p>
-        </label>
-        <p>
-          <select name="serviceQual" id="serviceQual">
-            <option disabled selected value="0">Escolha uma opção</option>
-            <option value="0.3">30% - incrível</option>
-            <option value="0.2">20% - Bom</option>
-            <option value="0.15">15% - Aceitável</option>
-            <option value="0.1">10% - Ruim</option>
-            <option value="0.05">05 % - Péssimo</option>
-          </select>
-        </p>
-        <label for="people">
+    <div id="container">
+      <div id="titulo">
+        <h1>Calculadora de gorjetas</h1>
+      </div>
+      <div id="form">
+        <form>
+          <label for="bill">
+            <p>Quanto ficou a conta?</p>
+          </label>
+          <p>
+            R$ <input type="number" placeholder="100" name="bill" id="bill" />
+          </p>
+          <label for="serviceQual">
+            <p>Como foi seu serviço?</p>
+          </label>
+          <div class="select">
+            <select name="serviceQual" id="serviceQual">
+              <option disabled selected value="0">Escolha uma opção</option>
+              <option value="0.3">30% - incrível</option>
+              <option value="0.2">20% - Bom</option>
+              <option value="0.15">15% - Aceitável</option>
+              <option value="0.1">10% - Ruim</option>
+              <option value="0.05">05 % - Péssimo</option>
+            </select>
+          </div>
+          <label for="people">
             <p>Quantos pessoas vão dividir a conta?</p>
-        </label>
-        <p>
-            <input type="number" placeholder="1" name="people" id="people"> pessoa(s)
-        </p>
-        <button type="submit">Calcular!</button>
-      </form>
+          </label>
+          <p>
+            <input type="number" placeholder="1" name="people" id="people" />
+            pessoa(s)
+          </p>
+          <div id="button-container">
+            <button type="submit" onclick="calcular()">Calcular!</button>
+          </div>
+          <div id="gorjeta">
+
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
