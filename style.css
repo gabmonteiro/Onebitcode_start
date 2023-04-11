@@ -3,6 +3,7 @@
 }
 
 * {
+  font-size: 60%;
   margin: 0;
   padding: 0;
   font-family: consolas;
@@ -16,9 +17,13 @@ body {
   justify-content: center;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 #container {
   background-color: white;
-  width: 25vw;
+  width: 500px;
   height: fit-content;
   border-radius: 15px;
   box-shadow: 10px 10px 66px -21px rgba(0, 0, 0, 0.75);
@@ -37,8 +42,8 @@ body {
   padding: 20px;
 }
 
-label p {
-  font-size: 1.2rem;
+label p, p {
+  font-size: 2rem;
   font-weight: 400;
   padding: 20px 0;
 }
@@ -50,7 +55,7 @@ label p {
   width: 50%;
 }
 .select select {
-  font-family: "Arial";
+  font-size: 1.5rem;
   display: inline-block;
   width: 100%;
   cursor: pointer;
@@ -64,6 +69,11 @@ label p {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+.select select option {
+  font-size: 1.5rem;
+}
+
 .select select::-ms-expand {
   display: none;
 }
@@ -114,7 +124,7 @@ button {
   cursor: pointer;
   color: white;
   font-family: Arial;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
   padding: 13px 32px;
   text-decoration: none;
@@ -127,4 +137,20 @@ button:hover {
 button:active {
   position: relative;
   top: 1px;
+}
+
+@media(max-width: 580px) {
+  #container {
+    max-width: 90vw;
+  }
+
+  label p, p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 20px 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
 }
